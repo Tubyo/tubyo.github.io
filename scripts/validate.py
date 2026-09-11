@@ -30,6 +30,9 @@ for lang,locale in [('fr','fr-FR'),('en','en-US'),('es','es-ES'),('de','de-DE'),
  assert f'<html lang="{lang}">' in text
  assert text.count('class="poster"')==10
  assert text.count('hreflang="')>=5
+ assert 'google-site-verification' in text
+ expected='https://tubyo.github.io/' if lang=='en' else f'https://tubyo.github.io/{lang}/'
+ assert f'<link rel="canonical" href="{expected}">' in text
  for device in ['iphone','ipad']:
   if len(list((root/'assets/screens'/locale/device).glob('*.webp')))!=10:errors.append(f'Incomplete gallery {locale}/{device}')
 assert (root/'app-ads.txt').exists()

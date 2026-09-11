@@ -9,9 +9,12 @@ DATA=json.loads((ROOT/'content/site.json').read_text())
 META=json.loads((ROOT/'content/slides.json').read_text())
 ORIGIN='https://tubyo.github.io'
 CONTACT='mailto:tubyoapp@gmail.com'
+VERIFICATION='xyOvGSgZWc9kIYk8hIXy34WhQBgsn3dlGP6D8vuxXgI'
+def locale_url(lang):
+ return ORIGIN+'/' if lang=='en' else f'{ORIGIN}/{lang}/'
 def page(lang):
- d=DATA[lang]; loc=d['locale']; url=f'{ORIGIN}/{lang}/'
- alternates=''.join(f'<link rel="alternate" hreflang="{l}" href="{ORIGIN}/{l}/">' for l in DATA)+f'<link rel="alternate" hreflang="x-default" href="{ORIGIN}/">'
+ d=DATA[lang]; loc=d['locale']; url=locale_url(lang)
+ alternates=''.join(f'<link rel="alternate" hreflang="{l}" href="{locale_url(l)}">' for l in DATA)+f'<link rel="alternate" hreflang="x-default" href="{ORIGIN}/">'
  languages=''.join(f'<a href="/{l}/" lang="{l}" hreflang="{l}"'+(' aria-current="page"' if l==lang else '')+f'>{v["name"]}</a>' for l,v in DATA.items())
  nav=''.join(f'<a href="#{anchor}">{e(label)}</a>' for anchor,label in zip(['experience','gallery','kids','free'],d['nav']))
  icons=['▣','◈','▤','↺']
@@ -21,7 +24,7 @@ def page(lang):
  points=''.join(f'<li><span aria-hidden="true">✓</span>{e(t)}</li>' for t in d['kidsPoints'])
  schema={'@context':'https://schema.org','@type':'WebSite','name':'Tubyo','url':url,'inLanguage':lang,'description':d['description'],'publisher':{'@type':'Organization','name':'Tubyo','url':ORIGIN,'email':'tubyoapp@gmail.com'}}
  return f'''<!doctype html>
-<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(d['description'])}"><meta name="theme-color" content="#0b1715"><meta name="referrer" content="strict-origin-when-cross-origin"><title>{e(d['title'])}</title><link rel="icon" href="/assets/brand.png"><link rel="canonical" href="{url}">{alternates}<meta property="og:type" content="website"><meta property="og:title" content="{e(d['title'])}"><meta property="og:description" content="{e(d['description'])}"><meta property="og:url" content="{url}"><meta property="og:locale" content="{loc.replace('-','_')}"><link rel="stylesheet" href="/assets/landing.css"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script src="/assets/landing.js" defer></script></head>
+<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(d['description'])}"><meta name="google-site-verification" content="{VERIFICATION}"><meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#0b1715"><meta name="referrer" content="strict-origin-when-cross-origin"><title>{e(d['title'])}</title><link rel="icon" href="/assets/brand.png"><link rel="canonical" href="{url}">{alternates}<meta property="og:type" content="website"><meta property="og:title" content="{e(d['title'])}"><meta property="og:description" content="{e(d['description'])}"><meta property="og:url" content="{url}"><meta property="og:locale" content="{loc.replace('-','_')}"><link rel="stylesheet" href="/assets/landing.css"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script src="/assets/landing.js" defer></script></head>
 <body data-locale="{loc}"><a class="skip" href="#main">{e(d['skip'])}</a><header class="header"><a href="/{lang}/" class="wordmark" aria-label="Tubyo">Tuby<img src="/assets/brand.png" width="36" height="36" alt="o"></a><nav aria-label="Tubyo">{nav}</nav><details class="languages"><summary aria-label="{e(d['language'])}"><span aria-hidden="true">◎</span> {lang.upper()} <span aria-hidden="true">⌄</span></summary><div>{languages}</div></details></header>
 <main id="main"><section class="hero wrap"><div class="hero-copy"><p class="eyebrow">{d['eyebrow']}</p><h1>{d['headline']}</h1><p class="intro">{e(d['intro'])}</p><p class="free-line"><span aria-hidden="true">✓</span> {e(d['free'])}</p><div class="cta-row"><a class="button" href="#gallery">{e(d['discover'])}<span aria-hidden="true">↗</span></a><a class="text-link" href="{CONTACT}">{e(d['contact'])}</a></div><div class="stores"><span>{e(d['apple'])}</span><span>{e(d['android'])}</span></div></div><div class="hero-art"><div class="orbit" aria-hidden="true"></div><img class="phone phone-back" src="/assets/screens/{loc}/hero-youtube.webp" width="390" height="844" alt="{e(META[loc]['slides'][2][1])}" decoding="async"><img class="phone phone-front" src="/assets/screens/{loc}/hero-home.webp" width="390" height="844" alt="{e(META[loc]['slides'][0][1])}" fetchpriority="high"></div></section>
 <div class="platform-strip wrap"><span>{e(d['platforms'])}</span><div>YouTube <i>·</i> Twitch <i>·</i> TikTok <i>·</i> Instagram</div></div>
@@ -37,7 +40,7 @@ for lang in DATA:
  (dest/'index.html').write_text(page(lang))
 root=page('en').replace(f'<link rel="canonical" href="{ORIGIN}/en/">',f'<link rel="canonical" href="{ORIGIN}/">').replace('"url": "https://tubyo.github.io/en/"','"url": "https://tubyo.github.io/"')
 (DOC/'index.html').write_text(root)
-urls=['/']+[f'/{l}/' for l in DATA]+['/support/','/privacy/','/terms/']
+urls=['/']+[f'/{l}/' for l in DATA if l!='en']+['/support/','/privacy/','/terms/']
 (DOC/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{ORIGIN}{p}</loc></url>' for p in urls)+'</urlset>')
 (DOC/'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {ORIGIN}/sitemap.xml\n')
 print('Generated five localized pages, root, sitemap and robots.txt')
