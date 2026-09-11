@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tubyo.github.io/sitemap.xml
