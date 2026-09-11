@@ -33,3 +33,18 @@ The website currently announces an upcoming App Store release and a planned
 Android release. Only replace availability copy and add a download CTA after
 verifying that the app is publicly available. Do not imply that App Review
 preparation is a commercial release.
+
+## Search indexing
+
+The URL-prefix property `https://tubyo.github.io/` is verified in Google Search
+Console under the Tubyo Google account. Keep the `google-site-verification`
+meta tag in the generator: removing it can invalidate ownership.
+
+The root is the canonical English page; `/en/` is a navigable alias. French,
+Spanish, German and Dutch pages are self-canonical and connected by reciprocal
+hreflang links. The sitemap contains the eight canonical public pages.
+
+Indexing and search positions are controlled by search engines. Verification,
+submission and a successful HTTP response do not prove indexing. Check Search
+Console's sitemap processing and URL Inspection reports before making such a
+claim. Do not add fake reviews, keyword-stuffed pages or invented download counts.
