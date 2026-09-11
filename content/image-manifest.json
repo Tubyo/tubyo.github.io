@@ -1,0 +1,802 @@
+[
+  {
+    "source": "images/fr-FR/iphone/01-home.png",
+    "file": "docs/assets/screens/fr-FR/iphone/home.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/iphone/02-pip.png",
+    "file": "docs/assets/screens/fr-FR/iphone/pip.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/iphone/03-youtube.png",
+    "file": "docs/assets/screens/fr-FR/iphone/youtube.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/iphone/04-creators.png",
+    "file": "docs/assets/screens/fr-FR/iphone/creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/iphone/05-content.png",
+    "file": "docs/assets/screens/fr-FR/iphone/content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/iphone/06-resume.png",
+    "file": "docs/assets/screens/fr-FR/iphone/resume.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/iphone/07-kids.png",
+    "file": "docs/assets/screens/fr-FR/iphone/kids.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/iphone/08-kids-creators.png",
+    "file": "docs/assets/screens/fr-FR/iphone/kids-creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/iphone/09-kids-content.png",
+    "file": "docs/assets/screens/fr-FR/iphone/kids-content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/iphone/10-parents.png",
+    "file": "docs/assets/screens/fr-FR/iphone/parents.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/01-home.png",
+    "file": "docs/assets/screens/fr-FR/ipad/home.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/02-pip.png",
+    "file": "docs/assets/screens/fr-FR/ipad/pip.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/03-youtube.png",
+    "file": "docs/assets/screens/fr-FR/ipad/youtube.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/04-creators.png",
+    "file": "docs/assets/screens/fr-FR/ipad/creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/05-content.png",
+    "file": "docs/assets/screens/fr-FR/ipad/content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/06-resume.png",
+    "file": "docs/assets/screens/fr-FR/ipad/resume.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/07-kids.png",
+    "file": "docs/assets/screens/fr-FR/ipad/kids.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/08-kids-creators.png",
+    "file": "docs/assets/screens/fr-FR/ipad/kids-creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/09-kids-content.png",
+    "file": "docs/assets/screens/fr-FR/ipad/kids-content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/fr-FR/ipad/10-parents.png",
+    "file": "docs/assets/screens/fr-FR/ipad/parents.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/01-home.png",
+    "file": "docs/assets/screens/en-US/iphone/home.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/02-pip.png",
+    "file": "docs/assets/screens/en-US/iphone/pip.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/03-youtube.png",
+    "file": "docs/assets/screens/en-US/iphone/youtube.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/04-creators.png",
+    "file": "docs/assets/screens/en-US/iphone/creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/05-content.png",
+    "file": "docs/assets/screens/en-US/iphone/content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/06-resume.png",
+    "file": "docs/assets/screens/en-US/iphone/resume.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/07-kids.png",
+    "file": "docs/assets/screens/en-US/iphone/kids.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/08-kids-creators.png",
+    "file": "docs/assets/screens/en-US/iphone/kids-creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/09-kids-content.png",
+    "file": "docs/assets/screens/en-US/iphone/kids-content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/iphone/10-parents.png",
+    "file": "docs/assets/screens/en-US/iphone/parents.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/01-home.png",
+    "file": "docs/assets/screens/en-US/ipad/home.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/02-pip.png",
+    "file": "docs/assets/screens/en-US/ipad/pip.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/03-youtube.png",
+    "file": "docs/assets/screens/en-US/ipad/youtube.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/04-creators.png",
+    "file": "docs/assets/screens/en-US/ipad/creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/05-content.png",
+    "file": "docs/assets/screens/en-US/ipad/content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/06-resume.png",
+    "file": "docs/assets/screens/en-US/ipad/resume.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/07-kids.png",
+    "file": "docs/assets/screens/en-US/ipad/kids.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/08-kids-creators.png",
+    "file": "docs/assets/screens/en-US/ipad/kids-creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/09-kids-content.png",
+    "file": "docs/assets/screens/en-US/ipad/kids-content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/en-US/ipad/10-parents.png",
+    "file": "docs/assets/screens/en-US/ipad/parents.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/01-home.png",
+    "file": "docs/assets/screens/es-ES/iphone/home.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/02-pip.png",
+    "file": "docs/assets/screens/es-ES/iphone/pip.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/03-youtube.png",
+    "file": "docs/assets/screens/es-ES/iphone/youtube.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/04-creators.png",
+    "file": "docs/assets/screens/es-ES/iphone/creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/05-content.png",
+    "file": "docs/assets/screens/es-ES/iphone/content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/06-resume.png",
+    "file": "docs/assets/screens/es-ES/iphone/resume.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/07-kids.png",
+    "file": "docs/assets/screens/es-ES/iphone/kids.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/08-kids-creators.png",
+    "file": "docs/assets/screens/es-ES/iphone/kids-creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/09-kids-content.png",
+    "file": "docs/assets/screens/es-ES/iphone/kids-content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/iphone/10-parents.png",
+    "file": "docs/assets/screens/es-ES/iphone/parents.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/01-home.png",
+    "file": "docs/assets/screens/es-ES/ipad/home.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/02-pip.png",
+    "file": "docs/assets/screens/es-ES/ipad/pip.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/03-youtube.png",
+    "file": "docs/assets/screens/es-ES/ipad/youtube.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/04-creators.png",
+    "file": "docs/assets/screens/es-ES/ipad/creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/05-content.png",
+    "file": "docs/assets/screens/es-ES/ipad/content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/06-resume.png",
+    "file": "docs/assets/screens/es-ES/ipad/resume.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/07-kids.png",
+    "file": "docs/assets/screens/es-ES/ipad/kids.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/08-kids-creators.png",
+    "file": "docs/assets/screens/es-ES/ipad/kids-creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/09-kids-content.png",
+    "file": "docs/assets/screens/es-ES/ipad/kids-content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/es-ES/ipad/10-parents.png",
+    "file": "docs/assets/screens/es-ES/ipad/parents.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/01-home.png",
+    "file": "docs/assets/screens/de-DE/iphone/home.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/02-pip.png",
+    "file": "docs/assets/screens/de-DE/iphone/pip.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/03-youtube.png",
+    "file": "docs/assets/screens/de-DE/iphone/youtube.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/04-creators.png",
+    "file": "docs/assets/screens/de-DE/iphone/creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/05-content.png",
+    "file": "docs/assets/screens/de-DE/iphone/content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/06-resume.png",
+    "file": "docs/assets/screens/de-DE/iphone/resume.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/07-kids.png",
+    "file": "docs/assets/screens/de-DE/iphone/kids.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/08-kids-creators.png",
+    "file": "docs/assets/screens/de-DE/iphone/kids-creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/09-kids-content.png",
+    "file": "docs/assets/screens/de-DE/iphone/kids-content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/iphone/10-parents.png",
+    "file": "docs/assets/screens/de-DE/iphone/parents.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/01-home.png",
+    "file": "docs/assets/screens/de-DE/ipad/home.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/02-pip.png",
+    "file": "docs/assets/screens/de-DE/ipad/pip.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/03-youtube.png",
+    "file": "docs/assets/screens/de-DE/ipad/youtube.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/04-creators.png",
+    "file": "docs/assets/screens/de-DE/ipad/creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/05-content.png",
+    "file": "docs/assets/screens/de-DE/ipad/content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/06-resume.png",
+    "file": "docs/assets/screens/de-DE/ipad/resume.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/07-kids.png",
+    "file": "docs/assets/screens/de-DE/ipad/kids.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/08-kids-creators.png",
+    "file": "docs/assets/screens/de-DE/ipad/kids-creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/09-kids-content.png",
+    "file": "docs/assets/screens/de-DE/ipad/kids-content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/de-DE/ipad/10-parents.png",
+    "file": "docs/assets/screens/de-DE/ipad/parents.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/01-home.png",
+    "file": "docs/assets/screens/nl-NL/iphone/home.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/02-pip.png",
+    "file": "docs/assets/screens/nl-NL/iphone/pip.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/03-youtube.png",
+    "file": "docs/assets/screens/nl-NL/iphone/youtube.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/04-creators.png",
+    "file": "docs/assets/screens/nl-NL/iphone/creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/05-content.png",
+    "file": "docs/assets/screens/nl-NL/iphone/content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/06-resume.png",
+    "file": "docs/assets/screens/nl-NL/iphone/resume.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/07-kids.png",
+    "file": "docs/assets/screens/nl-NL/iphone/kids.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/08-kids-creators.png",
+    "file": "docs/assets/screens/nl-NL/iphone/kids-creators.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/09-kids-content.png",
+    "file": "docs/assets/screens/nl-NL/iphone/kids-content.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/iphone/10-parents.png",
+    "file": "docs/assets/screens/nl-NL/iphone/parents.webp",
+    "size": [
+      660,
+      1434
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/01-home.png",
+    "file": "docs/assets/screens/nl-NL/ipad/home.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/02-pip.png",
+    "file": "docs/assets/screens/nl-NL/ipad/pip.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/03-youtube.png",
+    "file": "docs/assets/screens/nl-NL/ipad/youtube.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/04-creators.png",
+    "file": "docs/assets/screens/nl-NL/ipad/creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/05-content.png",
+    "file": "docs/assets/screens/nl-NL/ipad/content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/06-resume.png",
+    "file": "docs/assets/screens/nl-NL/ipad/resume.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/07-kids.png",
+    "file": "docs/assets/screens/nl-NL/ipad/kids.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/08-kids-creators.png",
+    "file": "docs/assets/screens/nl-NL/ipad/kids-creators.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/09-kids-content.png",
+    "file": "docs/assets/screens/nl-NL/ipad/kids-content.webp",
+    "size": [
+      800,
+      1067
+    ]
+  },
+  {
+    "source": "images/nl-NL/ipad/10-parents.png",
+    "file": "docs/assets/screens/nl-NL/ipad/parents.webp",
+    "size": [
+      800,
+      1067
+    ]
+  }
+]
