@@ -28,7 +28,7 @@ for p in root.rglob('*.html'):
   if not target.exists():errors.append(f'Missing reference {p}: {ref}')
 LANG_LIST=['fr','en','es','de','nl']
 pages=json.loads((root.parent/'content'/'guides.json').read_text())
-order=['pip','adblock','chromecast','background','fullscreen','kids','library','sites','platforms']
+order=['pip','adblock','chromecast','background','fullscreen','live','kids','library','save','shortcuts','sites','private','platforms']
 for key in order:
  for lang in LANG_LIST:
   data=pages[key][lang]
