@@ -28,7 +28,7 @@ for p in root.rglob('*.html'):
   if not target.exists():errors.append(f'Missing reference {p}: {ref}')
 LANG_LIST=['fr','en','es','de','nl']
 pages=json.loads((root.parent/'content'/'guides.json').read_text())
-order=['pip','adblock','chromecast','kids','platforms']
+order=['pip','adblock','chromecast','background','fullscreen','kids','library','sites','platforms']
 for key in order:
  for lang in LANG_LIST:
   data=pages[key][lang]
@@ -55,7 +55,7 @@ for lang,locale in [('fr','fr-FR'),('en','en-US'),('es','es-ES'),('de','de-DE'),
  assert '<meta name="twitter:card" content="summary_large_image">' in text
  assert '"MobileApplication"' in text and '"FAQPage"' in text and '"Organization"' in text
  assert text.count('class="intent"')==3
- assert text.count('class="guide-card"')==5
+ assert text.count('class="guide-card"')==len(order)
  assert 'class="footer-guides"' in text
  assert text.count('<details>')>=6
  assert '/assets/intents.css' in text
