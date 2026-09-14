@@ -33,8 +33,19 @@ for lang,locale in [('fr','fr-FR'),('en','en-US'),('es','es-ES'),('de','de-DE'),
  assert 'google-site-verification' in text
  expected='https://tubyo.github.io/' if lang=='en' else f'https://tubyo.github.io/{lang}/'
  assert f'<link rel="canonical" href="{expected}">' in text
+ assert '<meta property="og:site_name" content="Tubyo">' in text
+ assert f'<meta property="og:image" content="https://tubyo.github.io/assets/og/{locale}.png">' in text
+ assert '<meta name="twitter:card" content="summary_large_image">' in text
+ assert '"MobileApplication"' in text and '"FAQPage"' in text and '"Organization"' in text
+ assert text.count('class="intent"')==3
+ assert text.count('<details>')>=6
+ assert '/assets/intents.css' in text
+ if not (root/'assets'/'og'/f'{locale}.png').exists():errors.append(f'Missing social card {locale}')
  for device in ['iphone','ipad']:
   if len(list((root/'assets/screens'/locale/device).glob('*.webp')))!=10:errors.append(f'Incomplete gallery {locale}/{device}')
 assert (root/'app-ads.txt').exists()
+assert (root/'assets'/'intents.css').exists()
+sitemap=(root/'sitemap.xml').read_text()
+assert sitemap.count('<lastmod>')==sitemap.count('<loc>') and sitemap.count('<loc>')==8
 if errors:raise SystemExit('\n'.join(errors))
-print('PASS: routes, contact email, headings, language alternates, 100 poster assets and app-ads.txt')
+print('PASS: routes, contact email, headings, language alternates, site name, social cards, structured data, 100 poster assets and app-ads.txt')
