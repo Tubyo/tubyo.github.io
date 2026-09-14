@@ -1,0 +1,34 @@
+.guides{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px}
+.guide-card{display:flex;flex-direction:column;gap:10px;text-decoration:none;background:#13231b;border:1px solid var(--line);border-radius:24px;padding:26px;transition:border-color .2s,transform .2s}
+.guide-card:hover{border-color:var(--lime);transform:translateY(-3px)}
+.guide-card h3{margin:0;font-size:19px}
+.guide-card p{margin:0;font-size:15px;line-height:1.65}
+.guide-card span{margin-top:auto;color:var(--lime)}
+.footer-guides{display:flex;flex-wrap:wrap;gap:18px;margin:8px 0 27px;font-size:13px;color:#b5c3aa}
+.footer-guides a{text-decoration:none}
+.footer-guides a:hover{color:var(--lime)}
+.guide{padding-block:40px 90px}
+.guide .crumbs{display:flex;gap:10px;color:#8fa295;font-size:13px;margin-bottom:28px}
+.guide .crumbs a{text-decoration:none;color:inherit}
+.guide .crumbs a:hover{color:var(--lime)}
+.guide h1{font-size:clamp(34px,4.4vw,54px);line-height:1.1;letter-spacing:-.045em;margin:0 0 20px;font-weight:700;max-width:900px}
+.guide .lead{font-size:20px;line-height:1.6;color:var(--muted);max-width:820px}
+.guide-body{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+.guide-body section{background:#13231b;border:1px solid var(--line);border-radius:24px;padding:28px}
+.guide-body h2{font-size:20px;line-height:1.35;letter-spacing:-.02em;margin:0 0 14px}
+.guide-body p{margin:0;font-size:16px;line-height:1.7}
+.related{display:flex;flex-wrap:wrap;gap:14px;margin-top:52px}
+.related a{display:inline-flex;gap:12px;align-items:center;text-decoration:none;border:1px solid var(--line);border-radius:40px;padding:12px 20px;font-size:15px;font-weight:550}
+.related a:hover{border-color:var(--lime);color:var(--lime)}
+.guide-faq{margin-top:70px;border-top:1px solid var(--line);padding-top:36px;max-width:900px}
+.guide-faq h2{font-size:30px;letter-spacing:-.03em;margin:0 0 18px}
+.guide-faq details{border-bottom:1px solid var(--line);padding:20px 0}
+.guide-faq summary{display:flex;gap:20px;justify-content:space-between;cursor:pointer;list-style:none;font-weight:550;font-size:18px}
+.guide-faq summary::-webkit-details-marker{display:none}
+.guide-faq summary span{color:var(--lime);font-size:22px}
+.guide-faq details[open] summary span{transform:rotate(45deg)}
+.guide-faq p{font-size:16px;max-width:640px}
+.guide-cta{margin-top:70px;border:1px solid #49623b;border-radius:30px;padding:46px 24px;text-align:center;background:radial-gradient(ellipse at bottom,#43552b77,transparent 80%)}
+.guide-cta .button{margin-bottom:14px}
+.guide-cta p{font-size:13px;margin:0}
+@media(max-width:1050px){.guides,.guide-body{grid-template-columns:1fr;gap:22px}}
