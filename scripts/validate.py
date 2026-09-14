@@ -16,6 +16,7 @@ class Links(HTMLParser):
    if attr in a:self.refs.append(a[attr])
 errors=[]
 for p in root.rglob('*.html'):
+ if p.name.startswith('google') and p.name.endswith('.html'):continue  # Search Console ownership file
  text=p.read_text();parser=Links();parser.feed(text)
  if parser.h1!=1 or parser.titles!=1:errors.append(f'Invalid heading/title count: {p}')
  if 'elm.dev.code@gmail.com' in text:errors.append(f'Old email: {p}')
