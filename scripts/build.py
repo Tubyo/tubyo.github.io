@@ -3,8 +3,19 @@
 from pathlib import Path
 from html import escape as e
 import json
+import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 DOC=ROOT/'docs'
+PREVIOUS_HTML={str(path.relative_to(DOC)):path.read_bytes() for path in DOC.rglob('index.html')}
+PREVIOUS_DATES={}
+if (DOC/'sitemap.xml').exists():
+ try:
+  previous=ET.parse(DOC/'sitemap.xml').getroot()
+  namespace={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+  PREVIOUS_DATES={item.findtext('s:loc',namespaces=namespace):item.findtext('s:lastmod',namespaces=namespace)
+    for item in previous.findall('s:url',namespace)}
+ except ET.ParseError:
+  pass
 DATA=json.loads((ROOT/'content/site.json').read_text())
 META=json.loads((ROOT/'content/slides.json').read_text())
 GUIDES=json.loads((ROOT/'content/guides.json').read_text())
@@ -39,7 +50,7 @@ def page(lang):
  alternates=''.join(f'<link rel="alternate" hreflang="{l}" href="{locale_url(l)}">' for l in DATA)+f'<link rel="alternate" hreflang="x-default" href="{ORIGIN}/">'
  languages=''.join(f'<a href="/{l}/" lang="{l}" hreflang="{l}"'+(' aria-current="page"' if l==lang else '')+f'>{v["name"]}</a>' for l,v in DATA.items())
  nav=''.join(f'<a href="#{anchor}">{e(label)}</a>' for anchor,label in zip(['experience','gallery','kids','free'],d['nav']))
- icons=['▣','◈','▤','↺']
+ icons=['▣','◈','▤','↺','⚑','▥']
  cards=''.join(f'<article class="feature"><span class="feature-icon" aria-hidden="true">{icons[i]}</span><h3>{e(t)}</h3><p>{e(body)}</p></article>' for i,(t,body) in enumerate(d['features']))
  slides=''.join(f'''<a class="poster" href="/assets/screens/{loc}/iphone/{key}.webp" data-key="{key}"><img src="/assets/screens/{loc}/iphone/{key}.webp" width="660" height="1434" loading="lazy" decoding="async" alt="{e(title)} — Tubyo · iPhone"><span>{i+1:02d} <b>{e(title)}</b><span aria-hidden="true">↗</span></span></a>''' for i,(key,title,subtitle) in enumerate(META[loc]['slides']))
  faq=''.join(f'<details><summary>{e(q)}<span aria-hidden="true">+</span></summary><p>{e(a)}</p></details>' for q,a in d['faq'])
@@ -102,7 +113,12 @@ root=page('en').replace(f'<link rel="canonical" href="{ORIGIN}/en/">',f'<link re
 (DOC/'index.html').write_text(root)
 urls=['/']+[f'/{l}/' for l in DATA if l!='en']+[path_url(l, GUIDES[k][l]['slug']) for k in GUIDE_ORDER for l in DATA]+['/support/','/privacy/','/terms/']
 from datetime import date
-stamp=date.today().isoformat()
-(DOC/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{ORIGIN}{p}</loc><lastmod>{stamp}</lastmod></url>' for p in urls)+'</urlset>')
+def last_modified(route):
+ relative=(route.strip('/')+'/' if route != '/' else '')+'index.html'
+ target=DOC/relative
+ if PREVIOUS_HTML.get(relative) == target.read_bytes():
+  return PREVIOUS_DATES.get(ORIGIN+route) or date.today().isoformat()
+ return date.today().isoformat()
+(DOC/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{ORIGIN}{p}</loc><lastmod>{last_modified(p)}</lastmod></url>' for p in urls)+'</urlset>')
 (DOC/'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {ORIGIN}/sitemap.xml\n')
 print(f'Generated {len(DATA)} localized landings, {len(GUIDE_ORDER)*len(DATA)} guide pages, root, sitemap and robots.txt')
