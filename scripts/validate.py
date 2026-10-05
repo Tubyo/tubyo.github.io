@@ -2,7 +2,7 @@
 """Check generated routes, local assets and localized screenshot coverage."""
 from pathlib import Path
 from html.parser import HTMLParser
-from urllib.parse import urlsplit,unquote
+from urllib.parse import urlsplit,unquote,parse_qs
 import json
 root=Path(__file__).resolve().parents[1]/'docs'
 class Links(HTMLParser):
@@ -20,6 +20,13 @@ for p in root.rglob('*.html'):
  text=p.read_text();parser=Links();parser.feed(text)
  if parser.h1!=1 or parser.titles!=1:errors.append(f'Invalid heading/title count: {p}')
  if 'elm.dev.code@gmail.com' in text:errors.append(f'Old email: {p}')
+ if parser.lang in ('en','fr','es','de','nl') and ('class="hero wrap"' in text or 'class="guide wrap"' in text):
+  play_links=[urlsplit(ref) for ref in parser.refs if urlsplit(ref).netloc=='play.google.com']
+  if len(play_links)<2:errors.append(f'Missing Google Play download/footer links: {p}')
+  for link in play_links:
+   if link.path!='/store/apps/details' or parse_qs(link.query)!={'id':['app.tubyo.android'],'hl':[parser.lang]}:
+    errors.append(f'Wrong localized Google Play link: {p}: {link.geturl()}')
+  if 'class="button google-play"' not in text:errors.append(f'Missing download button: {p}')
  for ref in parser.refs:
   u=urlsplit(ref)
   if u.scheme or u.netloc or not u.path:continue

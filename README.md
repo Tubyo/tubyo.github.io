@@ -29,10 +29,10 @@ node --check docs/assets/landing.js
 `content/image-manifest.json` maps optimized images to the original marketing
 package. Do not put private app code, account details or credentials here.
 
-The website currently announces an upcoming App Store release and a planned
-Android release. Only replace availability copy and add a download CTA after
-verifying that the app is publicly available. Do not imply that App Review
-preparation is a commercial release.
+Tubyo is publicly available on Google Play (`app.tubyo.android`). Landing pages
+and guides link to its listing with `hl` set to the selected page language.
+The iPhone and iPad release remains in preparation for the App Store. Only
+change Apple availability and add its download link after verifying a public release.
 
 ## Search indexing
 
